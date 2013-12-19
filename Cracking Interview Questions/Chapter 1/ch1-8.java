@@ -12,18 +12,22 @@ class Main
 		String first = "waterbottle";
 		String second= "erbottlewat";		
 
-		System.out.println(isSubstring(first,second));
+		System.out.println(rotation(first,second));
 	}	
 
-	public static boolean isSubstring(String first, String second)
+	public static boolean rotation(String first, String second)
 	{
 
 		//since it's we wanna find if it's rotation, the two string should be equal in length
-		if(first.length()!=second.length())
-			return false;
+		String combo = first+first;
 
-		String combo = first + first;
+		if(first.length() == second.length())
+			return isSubstring(combo, second);
+		return false;
+	}
 
+	public static boolean isSubstring(String combo, String second)
+	{
 		for(int i = 0; i<combo.length(); i++)
 		{
 			for(int j=0; j<second.length(); j++)
