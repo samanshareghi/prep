@@ -1,8 +1,15 @@
+/*
+Cracking interview - chapter 1.4
+Write a method to decide if two strings are anagrams or not.
+*/
+
 import java.util.*;
 class Main
 {
 	public static void main(String [] args)
 	{
+
+		//Doesn't accept space or any other special characters
 		char[] first = "Thepublicartgalleries".toCharArray();
 		char[] second = "largepicturehallsibeT".toCharArray();
 
